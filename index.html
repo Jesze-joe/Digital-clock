@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Digital Clock</title>
+    </head>
+    <body>
+        <div class="container">
+            <p id="display"></p>
+            <p id="ddate"></p>
+        </div>    
+    </body>
+    <style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        text-align: center;
+        background-color: black;
+        width: 30%;
+        border-radius: 10px;
+        padding: 30px;
+    }
+    .container p{
+        color: white;
+        font-size: larger;
+    }
+
+    </style>
+    <script>
+   let display = document.getElementById('display')
+   let date = document.getElementById('ddate')
+   setInterval(function hi (){
+   var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+display.innerHTML = time 
+date.innerHTML = today
+   },1000);
+   hi()
+    </script>
+</html>
